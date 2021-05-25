@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Medium.otf">
+            <string>SFProText-Medium</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondOnboardingView" customModule="Story" customModuleProvider="target">
+            <connections>
+                <outlet property="beginButton" destination="SbV-C1-rKl" id="FSw-Zv-xMO"/>
+                <outlet property="subtitleLabel" destination="DVb-zj-uWt" id="jWi-fe-ySJ"/>
+                <outlet property="titleLabel" destination="mh9-zi-WK5" id="Unq-gN-oeL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JxO-9J-d1g">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="step3" translatesAutoresizingMaskIntoConstraints="NO" id="qRH-Rt-he4">
+                    <rect key="frame" x="5" y="112" width="404" height="404"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qRH-Rt-he4" secondAttribute="height" multiplier="1:1" id="iq1-iE-rIj"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Ваши данные под надежной защитой" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mh9-zi-WK5">
+                    <rect key="frame" x="20" y="583" width="374" height="56"/>
+                    <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="24"/>
+                    <color key="textColor" name="darkBlue"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Уникальное хранение данных на сервере и код пароль при входе" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVb-zj-uWt">
+                    <rect key="frame" x="20" y="651" width="374" height="35"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                    <color key="textColor" name="gray"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbV-C1-rKl" customClass="MainButton" customModule="Story" customModuleProvider="target">
+                    <rect key="frame" x="40" y="718" width="334" height="54"/>
+                    <color key="backgroundColor" name="darkBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="p2n-1d-GYP"/>
+                    </constraints>
+                    <state key="normal" title=" Начать">
+                        <color key="titleColor" name="white"/>
+                    </state>
+                    <connections>
+                        <action selector="beginButtonAction:" destination="-1" eventType="touchUpInside" id="v8z-XT-sPL"/>
+                    </connections>
+                </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="ErM-rI-NQL">
+                    <rect key="frame" x="146" y="546" width="122.5" height="27.5"/>
+                    <color key="pageIndicatorTintColor" name="gray"/>
+                    <color key="currentPageIndicatorTintColor" name="orange"/>
+                </pageControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Tmc-ZH-9be"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Tmc-ZH-9be" firstAttribute="trailing" secondItem="qRH-Rt-he4" secondAttribute="trailing" priority="253" constant="5" id="0Ca-cw-b1p"/>
+                <constraint firstItem="ErM-rI-NQL" firstAttribute="centerX" secondItem="Tmc-ZH-9be" secondAttribute="centerX" id="1Ph-jv-7Al"/>
+                <constraint firstItem="Tmc-ZH-9be" firstAttribute="trailing" secondItem="SbV-C1-rKl" secondAttribute="trailing" constant="40" id="4ce-Py-3gz"/>
+                <constraint firstItem="Tmc-ZH-9be" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SbV-C1-rKl" secondAttribute="bottom" constant="20" id="Cq2-G9-RNM"/>
+                <constraint firstItem="DVb-zj-uWt" firstAttribute="leading" secondItem="Tmc-ZH-9be" secondAttribute="leading" constant="20" id="S2z-us-Cg6"/>
+                <constraint firstItem="mh9-zi-WK5" firstAttribute="leading" secondItem="Tmc-ZH-9be" secondAttribute="leading" constant="20" id="Wmf-aU-fTF"/>
+                <constraint firstAttribute="trailing" secondItem="mh9-zi-WK5" secondAttribute="trailing" constant="20" id="jsV-Zb-94A"/>
+                <constraint firstItem="Tmc-ZH-9be" firstAttribute="trailing" secondItem="DVb-zj-uWt" secondAttribute="trailing" constant="20" id="lES-Ve-H6l"/>
+                <constraint firstItem="SbV-C1-rKl" firstAttribute="top" secondItem="DVb-zj-uWt" secondAttribute="bottom" constant="32" id="oCV-FN-6du"/>
+                <constraint firstItem="qRH-Rt-he4" firstAttribute="top" secondItem="Tmc-ZH-9be" secondAttribute="top" constant="68" id="t3V-fg-n9U"/>
+                <constraint firstItem="mh9-zi-WK5" firstAttribute="top" secondItem="qRH-Rt-he4" secondAttribute="bottom" constant="67" id="tSP-VB-isG"/>
+                <constraint firstItem="SbV-C1-rKl" firstAttribute="leading" secondItem="Tmc-ZH-9be" secondAttribute="leading" constant="40" id="tZ4-ex-GRB"/>
+                <constraint firstItem="DVb-zj-uWt" firstAttribute="top" secondItem="mh9-zi-WK5" secondAttribute="bottom" constant="12" id="uJl-GH-IRZ"/>
+                <constraint firstItem="qRH-Rt-he4" firstAttribute="centerX" secondItem="Tmc-ZH-9be" secondAttribute="centerX" id="uot-aj-1f0"/>
+                <constraint firstItem="qRH-Rt-he4" firstAttribute="leading" secondItem="Tmc-ZH-9be" secondAttribute="leading" priority="253" constant="5" id="xQ8-Rr-dtt"/>
+                <constraint firstItem="ErM-rI-NQL" firstAttribute="top" secondItem="qRH-Rt-he4" secondAttribute="bottom" constant="30" id="zln-bG-iey"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="145"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="step3" width="366" height="366"/>
+        <namedColor name="darkBlue">
+            <color red="0.22699999809265137" green="0.23899999260902405" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray">
+            <color red="0.4823529411764706" green="0.50980392156862742" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="orange">
+            <color red="1" green="0.70599997043609619" blue="0.14499999582767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

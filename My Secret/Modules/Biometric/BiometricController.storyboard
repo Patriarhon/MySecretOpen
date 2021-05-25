@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Biometric Controller-->
+        <scene sceneID="Zg5-cR-hkR">
+            <objects>
+                <viewController storyboardIdentifier="BiometricController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L6f-Mk-5Bl" customClass="BiometricController" customModule="My_Secret" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SLg-xA-BV7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k66-YN-SZV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Заблокирован" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ue4-ck-9qN">
+                                        <rect key="frame" x="20" y="328" width="374" height="28"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Используйте FaceID, чтобы разблокировать Story" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3c-fs-QXv">
+                                        <rect key="frame" x="20" y="388" width="374" height="42"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1w-a2-Cxu">
+                                        <rect key="frame" x="20" y="462" width="374" height="30"/>
+                                        <state key="normal" title="Использовать FaceID"/>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="L6f-Mk-5Bl" eventType="touchUpInside" id="WD1-jv-vJE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="F1w-a2-Cxu" firstAttribute="top" secondItem="Q3c-fs-QXv" secondAttribute="bottom" constant="32" id="1q2-Ap-mGB"/>
+                                    <constraint firstItem="Q3c-fs-QXv" firstAttribute="top" secondItem="ue4-ck-9qN" secondAttribute="bottom" constant="32" id="2cU-2E-Bpe"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q3c-fs-QXv" secondAttribute="trailing" constant="20" id="96q-EY-Saq"/>
+                                    <constraint firstItem="Q3c-fs-QXv" firstAttribute="leading" secondItem="k66-YN-SZV" secondAttribute="leading" constant="20" id="9XV-Nj-MbD"/>
+                                    <constraint firstItem="Q3c-fs-QXv" firstAttribute="centerY" secondItem="k66-YN-SZV" secondAttribute="centerY" id="G8s-OH-Gz7"/>
+                                    <constraint firstItem="ue4-ck-9qN" firstAttribute="leading" secondItem="k66-YN-SZV" secondAttribute="leading" constant="20" id="MoH-Th-TUh"/>
+                                    <constraint firstItem="F1w-a2-Cxu" firstAttribute="leading" secondItem="k66-YN-SZV" secondAttribute="leading" constant="20" id="UQx-Hp-qtu"/>
+                                    <constraint firstAttribute="trailing" secondItem="F1w-a2-Cxu" secondAttribute="trailing" constant="20" id="VSZ-da-B8c"/>
+                                    <constraint firstAttribute="trailing" secondItem="ue4-ck-9qN" secondAttribute="trailing" constant="20" id="aHB-F8-Ey5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k66-YN-SZV" firstAttribute="leading" secondItem="62V-tF-7ok" secondAttribute="leading" id="2F0-0l-XGY"/>
+                            <constraint firstItem="62V-tF-7ok" firstAttribute="trailing" secondItem="k66-YN-SZV" secondAttribute="trailing" id="HPI-fq-0Sr"/>
+                            <constraint firstItem="62V-tF-7ok" firstAttribute="bottom" secondItem="k66-YN-SZV" secondAttribute="bottom" id="RFt-TC-qw5"/>
+                            <constraint firstItem="k66-YN-SZV" firstAttribute="top" secondItem="62V-tF-7ok" secondAttribute="top" id="YAI-2c-V2h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="62V-tF-7ok"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="F1w-a2-Cxu" id="tIO-Ff-qxw"/>
+                        <outlet property="containerView" destination="k66-YN-SZV" id="MFA-Zj-f7g"/>
+                        <outlet property="subtitleLabel" destination="Q3c-fs-QXv" id="64F-Zm-6my"/>
+                        <outlet property="titleLabel" destination="ue4-ck-9qN" id="ZCg-d6-6DU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kby-g6-Poa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="130"/>
+        </scene>
+    </scenes>
+</document>

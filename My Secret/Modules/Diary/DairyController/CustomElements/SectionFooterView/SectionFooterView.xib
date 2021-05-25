@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SectionFooterView" customModule="My_Secret" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="cs5-AU-eVn">
+            <rect key="frame" x="0.0" y="0.0" width="547" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l9m-qQ-ZeR">
+                    <rect key="frame" x="250.5" y="12" width="46" height="1"/>
+                    <color key="backgroundColor" name="Gray"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="6Ds-Xi-MxW"/>
+                        <constraint firstAttribute="width" constant="46" id="jzt-PR-Ovv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="screenBackground"/>
+            <constraints>
+                <constraint firstItem="l9m-qQ-ZeR" firstAttribute="top" secondItem="cs5-AU-eVn" secondAttribute="top" constant="12" id="Ged-EK-cem"/>
+                <constraint firstAttribute="bottom" secondItem="l9m-qQ-ZeR" secondAttribute="bottom" priority="250" constant="7" id="VMQ-x7-FMi"/>
+                <constraint firstItem="l9m-qQ-ZeR" firstAttribute="centerX" secondItem="hJu-8f-I7g" secondAttribute="centerX" id="ovQ-hV-gGD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="hJu-8f-I7g"/>
+            <point key="canvasLocation" x="47.8125" y="219.19014084507043"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Gray">
+            <color red="0.4823529411764706" green="0.50980392156862742" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="screenBackground">
+            <color red="0.98400002717971802" green="0.98400002717971802" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

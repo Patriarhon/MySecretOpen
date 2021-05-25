@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DairyModeView" customModule="My_Secret" customModuleProvider="target">
+            <connections>
+                <outlet property="indicatorView" destination="Qeh-bL-Zlh" id="CfI-Qx-K8B"/>
+                <outletCollection property="modeButtons" destination="4mr-l2-FkW" collectionClass="NSMutableArray" id="vgb-sM-vQI"/>
+                <outletCollection property="modeButtons" destination="PSe-cG-dSQ" collectionClass="NSMutableArray" id="qKN-hQ-ItG"/>
+                <outletCollection property="modeButtons" destination="sIu-Ww-z8J" collectionClass="NSMutableArray" id="Xvm-j7-FP7"/>
+                <outletCollection property="indicatorCenterXConstraints" destination="ZIi-Fb-IJK" collectionClass="NSMutableArray" id="edw-tF-VJz"/>
+                <outletCollection property="indicatorCenterXConstraints" destination="M1y-Dv-JDG" collectionClass="NSMutableArray" id="JFm-59-wQg"/>
+                <outletCollection property="indicatorCenterXConstraints" destination="0Xl-JW-Kqc" collectionClass="NSMutableArray" id="U0B-Mu-drR"/>
+                <outletCollection property="indicatorWidthConstraints" destination="58i-eE-alb" collectionClass="NSMutableArray" id="KoJ-tV-0dw"/>
+                <outletCollection property="indicatorWidthConstraints" destination="PZy-JY-Ahp" collectionClass="NSMutableArray" id="h2O-x7-0fa"/>
+                <outletCollection property="indicatorWidthConstraints" destination="upf-r8-Q8Q" collectionClass="NSMutableArray" id="nqH-T4-J3s"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YGe-LD-LuD">
+            <rect key="frame" x="0.0" y="0.0" width="359" height="95"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="44" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tpw-BR-QG7">
+                    <rect key="frame" x="74" y="0.0" width="211" height="29"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mr-l2-FkW">
+                            <rect key="frame" x="0.0" y="0.0" width="41" height="29"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Day">
+                                <color key="titleColor" name="gray"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" name="gray"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapModeButton:" destination="-1" eventType="touchUpInside" id="aGs-vY-QrD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSe-cG-dSQ">
+                            <rect key="frame" x="85" y="0.0" width="41" height="29"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Month">
+                                <color key="titleColor" name="Gray"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" name="Gray"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapModeButton:" destination="-1" eventType="touchUpInside" id="DfY-aZ-76X"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIu-Ww-z8J">
+                            <rect key="frame" x="170" y="0.0" width="41" height="29"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Year">
+                                <color key="titleColor" name="Gray"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" name="Gray"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapModeButton:" destination="-1" eventType="touchUpInside" id="2f1-es-zib"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qeh-bL-Zlh">
+                    <rect key="frame" x="74" y="23" width="41" height="2"/>
+                    <color key="backgroundColor" name="Orange"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="Q79-ZH-4le"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Qeh-bL-Zlh" firstAttribute="centerX" secondItem="sIu-Ww-z8J" secondAttribute="centerX" id="0Xl-JW-Kqc"/>
+                <constraint firstItem="Qeh-bL-Zlh" firstAttribute="width" secondItem="4mr-l2-FkW" secondAttribute="width" id="58i-eE-alb"/>
+                <constraint firstItem="Qeh-bL-Zlh" firstAttribute="top" secondItem="tpw-BR-QG7" secondAttribute="bottom" constant="-6" id="HWF-R6-QXS"/>
+                <constraint firstItem="Qeh-bL-Zlh" firstAttribute="centerX" secondItem="PSe-cG-dSQ" secondAttribute="centerX" id="M1y-Dv-JDG"/>
+                <constraint firstItem="Qeh-bL-Zlh" firstAttribute="width" secondItem="PSe-cG-dSQ" secondAttribute="width" id="PZy-JY-Ahp"/>
+                <constraint firstItem="Qeh-bL-Zlh" firstAttribute="centerX" secondItem="4mr-l2-FkW" secondAttribute="centerX" id="ZIi-Fb-IJK"/>
+                <constraint firstItem="tpw-BR-QG7" firstAttribute="top" secondItem="YGe-LD-LuD" secondAttribute="top" id="e5u-xl-TTV"/>
+                <constraint firstItem="tpw-BR-QG7" firstAttribute="centerX" secondItem="YGe-LD-LuD" secondAttribute="centerX" id="eyN-SU-c9u"/>
+                <constraint firstItem="Qeh-bL-Zlh" firstAttribute="width" secondItem="sIu-Ww-z8J" secondAttribute="width" id="upf-r8-Q8Q"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="QDc-q5-97J"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="0Xl-JW-Kqc"/>
+                    <exclude reference="M1y-Dv-JDG"/>
+                    <exclude reference="PZy-JY-Ahp"/>
+                    <exclude reference="upf-r8-Q8Q"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-843" y="-335"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Gray">
+            <color red="0.4823529411764706" green="0.50980392156862742" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Orange">
+            <color red="1" green="0.70599997043609619" blue="0.14499999582767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray">
+            <color red="0.4823529411764706" green="0.50980392156862742" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

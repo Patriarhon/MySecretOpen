@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchDayCell" id="bhc-P8-puN" customClass="SearchDayCell" customModule="My_Secret" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0Ia-7g-5gy">
+                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6De-LV-hBT">
+                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                        <color key="backgroundColor" name="orange"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateHere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23T-By-OFj">
+                        <rect key="frame" x="28.5" y="53.5" width="71" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="6De-LV-hBT" secondAttribute="trailing" id="Agb-bn-lE8"/>
+                    <constraint firstItem="6De-LV-hBT" firstAttribute="top" secondItem="0Ia-7g-5gy" secondAttribute="top" id="B1Z-GH-Z6q"/>
+                    <constraint firstItem="23T-By-OFj" firstAttribute="centerY" secondItem="0Ia-7g-5gy" secondAttribute="centerY" id="Nds-V3-nwl"/>
+                    <constraint firstAttribute="bottom" secondItem="6De-LV-hBT" secondAttribute="bottom" id="Tl4-TQ-ydS"/>
+                    <constraint firstItem="23T-By-OFj" firstAttribute="centerX" secondItem="0Ia-7g-5gy" secondAttribute="centerX" id="tRV-EB-6oT"/>
+                    <constraint firstItem="6De-LV-hBT" firstAttribute="leading" secondItem="0Ia-7g-5gy" secondAttribute="leading" id="we4-2b-8hA"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="dayLabel" destination="23T-By-OFj" id="e3D-Gs-HAk"/>
+                <outlet property="selectedView" destination="6De-LV-hBT" id="PQ3-Zr-iFO"/>
+            </connections>
+            <point key="canvasLocation" x="-396" y="145"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="orange">
+            <color red="1" green="0.70599997043609619" blue="0.14499999582767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

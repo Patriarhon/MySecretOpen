@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FontPickerView" customModule="My_Secret" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="FZY-rD-Wd2" id="c6F-Sa-bAS"/>
+                <outlet property="cancelLabel" destination="kAw-Iv-HJb" id="cQp-FZ-7NM"/>
+                <outlet property="pickerView" destination="tbU-Rh-A7p" id="O5U-OE-W7J"/>
+                <outlet property="saveButton" destination="So8-XL-sw0" id="ona-YL-XmU"/>
+                <outlet property="saveLabel" destination="xbX-wR-dbi" id="fsS-NG-YAj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2FE-OC-TVB">
+            <rect key="frame" x="0.0" y="0.0" width="463" height="419"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="QeQ-V2-vyd">
+                    <rect key="frame" x="138.5" y="178" width="186" height="62"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So8-XL-sw0" customClass="RoundedShadownButton" customModule="My_Secret" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="62" id="6ig-rt-faD"/>
+                                <constraint firstAttribute="width" constant="62" id="yn6-Nd-xm3"/>
+                            </constraints>
+                            <state key="normal" image="save">
+                                <color key="titleColor" name="white"/>
+                            </state>
+                            <connections>
+                                <action selector="saveButtonAction:" destination="-1" eventType="touchUpInside" id="kvd-8g-cea"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZY-rD-Wd2" customClass="RoundedShadownButton" customModule="My_Secret" customModuleProvider="target">
+                            <rect key="frame" x="124" y="0.0" width="62" height="62"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="62" id="msO-3L-ahG"/>
+                                <constraint firstAttribute="height" constant="62" id="pRM-wi-oOF"/>
+                            </constraints>
+                            <state key="normal" image="cancel">
+                                <color key="titleColor" name="white"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="-1" eventType="touchUpInside" id="YYn-Mq-VcG"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbU-Rh-A7p">
+                    <rect key="frame" x="0.0" y="0.0" width="463" height="162"/>
+                </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbX-wR-dbi">
+                    <rect key="frame" x="152" y="250" width="35.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" name="darkBlue"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAw-Iv-HJb">
+                    <rect key="frame" x="276" y="250" width="35.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" name="darkBlue"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tbU-Rh-A7p" firstAttribute="top" secondItem="2FE-OC-TVB" secondAttribute="top" id="2bG-83-oxH"/>
+                <constraint firstItem="kAw-Iv-HJb" firstAttribute="top" secondItem="QeQ-V2-vyd" secondAttribute="bottom" constant="10" id="7FV-FP-Tdr"/>
+                <constraint firstItem="QeQ-V2-vyd" firstAttribute="top" secondItem="tbU-Rh-A7p" secondAttribute="bottom" constant="16" id="7Is-qr-I0M"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xbX-wR-dbi" secondAttribute="bottom" constant="14" id="IrP-TD-YiN"/>
+                <constraint firstItem="tbU-Rh-A7p" firstAttribute="trailing" secondItem="2FE-OC-TVB" secondAttribute="trailing" id="ghx-6T-t1F"/>
+                <constraint firstItem="xbX-wR-dbi" firstAttribute="centerX" secondItem="So8-XL-sw0" secondAttribute="centerX" id="hJp-lx-fF5"/>
+                <constraint firstItem="kAw-Iv-HJb" firstAttribute="centerX" secondItem="FZY-rD-Wd2" secondAttribute="centerX" id="maa-y7-Us0"/>
+                <constraint firstItem="QeQ-V2-vyd" firstAttribute="centerX" secondItem="2FE-OC-TVB" secondAttribute="centerX" id="s5k-A8-oY5"/>
+                <constraint firstItem="xbX-wR-dbi" firstAttribute="top" secondItem="QeQ-V2-vyd" secondAttribute="bottom" constant="10" id="xgN-Td-rVN"/>
+                <constraint firstItem="tbU-Rh-A7p" firstAttribute="leading" secondItem="2FE-OC-TVB" secondAttribute="leading" id="zOQ-IM-e7g"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-181.8840579710145" y="102.12053571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cancel" width="20" height="20"/>
+        <image name="save" width="26" height="20"/>
+        <namedColor name="darkBlue">
+            <color red="0.22699999809265137" green="0.23899999260902405" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

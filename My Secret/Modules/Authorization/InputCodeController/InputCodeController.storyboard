@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Input Code Controller-->
+        <scene sceneID="gSJ-Ss-1Uh">
+            <objects>
+                <viewController storyboardIdentifier="InputCodeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NeG-fi-aRC" customClass="InputCodeController" customModule="My_Secret" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nc5-KR-pzG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="lYV-kQ-tP8">
+                                <rect key="frame" x="166.5" y="80" width="81" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="2Yi-96-kzW"/>
+                                    <constraint firstAttribute="width" constant="81" id="8mw-TY-cUm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Secret" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAw-h4-3XE">
+                                <rect key="frame" x="152.5" y="175" width="109" height="28"/>
+                                <fontDescription key="fontDescription" name="PoiretOne-Regular" family="Poiret One" pointSize="24"/>
+                                <color key="textColor" name="DarkBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the received code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBY-zD-DdE" customClass="RoundedShadowTextField" customModule="My_Secret" customModuleProvider="target">
+                                <rect key="frame" x="40" y="239" width="334" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="EU0-m9-RNW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="codeTextFieldChanged:" destination="NeG-fi-aRC" eventType="editingChanged" id="GUn-cz-zAI"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COi-xc-95J" customClass="MainButton" customModule="My_Secret" customModuleProvider="target">
+                                <rect key="frame" x="40" y="349.5" width="334" height="54"/>
+                                <color key="backgroundColor" name="DarkBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="jjS-lG-gW1"/>
+                                </constraints>
+                                <state key="normal" title="Resend">
+                                    <color key="titleColor" name="White"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapResendButton:" destination="NeG-fi-aRC" eventType="touchUpInside" id="uZd-Ab-14C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMS code was sent on number +7111111111" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLO-4s-fxa">
+                                <rect key="frame" x="40" y="303" width="334" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="Gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't get the code?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWZ-l2-dbG">
+                                <rect key="frame" x="40" y="411.5" width="334" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="Gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5K-18-JdX">
+                                <rect key="frame" x="6" y="44" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DIZ-HZ-det"/>
+                                    <constraint firstAttribute="width" constant="44" id="nCh-yj-z2w"/>
+                                </constraints>
+                                <state key="normal" image="arrowBack"/>
+                                <connections>
+                                    <action selector="didTapBackButton:" destination="NeG-fi-aRC" eventType="touchUpInside" id="KdT-gb-8YT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="screenBackground"/>
+                        <constraints>
+                            <constraint firstItem="lYV-kQ-tP8" firstAttribute="top" secondItem="Nc5-KR-pzG" secondAttribute="top" constant="80" id="0Dv-1d-eBv"/>
+                            <constraint firstItem="8s8-Di-Ch9" firstAttribute="trailing" secondItem="tLO-4s-fxa" secondAttribute="trailing" constant="40" id="2cb-4R-c2I"/>
+                            <constraint firstItem="8s8-Di-Ch9" firstAttribute="trailing" secondItem="hBY-zD-DdE" secondAttribute="trailing" constant="40" id="4Uk-Di-5bn"/>
+                            <constraint firstItem="COi-xc-95J" firstAttribute="top" secondItem="tLO-4s-fxa" secondAttribute="bottom" constant="32" id="56A-Rk-QZw"/>
+                            <constraint firstItem="8s8-Di-Ch9" firstAttribute="trailing" secondItem="COi-xc-95J" secondAttribute="trailing" constant="40" id="7Mi-Rw-6ql"/>
+                            <constraint firstItem="aAw-h4-3XE" firstAttribute="centerX" secondItem="8s8-Di-Ch9" secondAttribute="centerX" id="8FE-d0-nRb"/>
+                            <constraint firstItem="8s8-Di-Ch9" firstAttribute="trailing" secondItem="PWZ-l2-dbG" secondAttribute="trailing" constant="40" id="8LK-GV-kCh"/>
+                            <constraint firstItem="S5K-18-JdX" firstAttribute="top" secondItem="8s8-Di-Ch9" secondAttribute="top" id="AG2-NG-Jz9"/>
+                            <constraint firstItem="aAw-h4-3XE" firstAttribute="top" secondItem="lYV-kQ-tP8" secondAttribute="bottom" id="CEx-52-5SP"/>
+                            <constraint firstItem="COi-xc-95J" firstAttribute="leading" secondItem="8s8-Di-Ch9" secondAttribute="leading" constant="40" id="Fg1-bj-KHa"/>
+                            <constraint firstItem="S5K-18-JdX" firstAttribute="centerX" secondItem="8s8-Di-Ch9" secondAttribute="leading" constant="28" id="QEl-uQ-GZD"/>
+                            <constraint firstItem="PWZ-l2-dbG" firstAttribute="leading" secondItem="8s8-Di-Ch9" secondAttribute="leading" constant="40" id="SS1-rt-yrR"/>
+                            <constraint firstItem="hBY-zD-DdE" firstAttribute="top" secondItem="aAw-h4-3XE" secondAttribute="bottom" constant="36" id="Spf-FD-SCm"/>
+                            <constraint firstItem="PWZ-l2-dbG" firstAttribute="top" secondItem="COi-xc-95J" secondAttribute="bottom" constant="8" id="Szu-tx-EFi"/>
+                            <constraint firstItem="tLO-4s-fxa" firstAttribute="leading" secondItem="8s8-Di-Ch9" secondAttribute="leading" constant="40" id="e5o-UA-wz5"/>
+                            <constraint firstItem="hBY-zD-DdE" firstAttribute="leading" secondItem="8s8-Di-Ch9" secondAttribute="leading" constant="40" id="fbA-1U-RU4"/>
+                            <constraint firstItem="lYV-kQ-tP8" firstAttribute="centerX" secondItem="8s8-Di-Ch9" secondAttribute="centerX" id="fnh-wQ-ULn"/>
+                            <constraint firstItem="tLO-4s-fxa" firstAttribute="top" secondItem="hBY-zD-DdE" secondAttribute="bottom" constant="16" id="tEg-lU-Bl9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8s8-Di-Ch9"/>
+                    </view>
+                    <connections>
+                        <outlet property="enterCodeTextField" destination="hBY-zD-DdE" id="zZd-V7-aTV"/>
+                        <outlet property="logoLabel" destination="aAw-h4-3XE" id="KGU-XE-gDK"/>
+                        <outlet property="numberLabel" destination="tLO-4s-fxa" id="s6U-dX-t19"/>
+                        <outlet property="sendAgainButton" destination="COi-xc-95J" id="FyX-WU-dli"/>
+                        <outlet property="sendAgainLabel" destination="PWZ-l2-dbG" id="B0t-9e-FKd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iv4-yf-R0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1039" y="-38"/>
+        </scene>
+        <!--Input Code Controller-->
+        <scene sceneID="8VF-0y-gXR">
+            <objects>
+                <viewController storyboardIdentifier="InputCodeControllerSmall" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mOk-ht-fXS" customClass="InputCodeController" customModule="My_Secret" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nOx-aN-2yh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Pf1-tZ-XPc">
+                                <rect key="frame" x="119.5" y="30" width="81" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="iFq-2R-gs2"/>
+                                    <constraint firstAttribute="width" constant="81" id="pVy-AF-b53"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Secret" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dud-MY-IqY">
+                                <rect key="frame" x="105.5" y="125" width="109" height="28"/>
+                                <fontDescription key="fontDescription" name="PoiretOne-Regular" family="Poiret One" pointSize="24"/>
+                                <color key="textColor" name="DarkBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the received code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YYQ-R7-DKC" customClass="RoundedShadowTextField" customModule="My_Secret" customModuleProvider="target">
+                                <rect key="frame" x="20" y="189" width="280" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="dPR-j9-eRa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="codeTextFieldChanged:" destination="mOk-ht-fXS" eventType="editingChanged" id="T8n-T9-2vD"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQv-wL-log" customClass="MainButton" customModule="My_Secret" customModuleProvider="target">
+                                <rect key="frame" x="20" y="314" width="280" height="54"/>
+                                <color key="backgroundColor" name="DarkBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="DBP-ON-Vr3"/>
+                                </constraints>
+                                <state key="normal" title="Resend">
+                                    <color key="titleColor" name="White"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapResendButton:" destination="mOk-ht-fXS" eventType="touchUpInside" id="sI3-3W-lGP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMS code was sent on number +7111111111" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MF-ZO-jhr">
+                                <rect key="frame" x="40" y="253" width="240" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="Gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't get the code?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99Q-jP-XbT">
+                                <rect key="frame" x="40" y="376" width="240" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="Gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C0-Oi-6nm">
+                                <rect key="frame" x="6" y="44" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aeE-h0-5Pv"/>
+                                    <constraint firstAttribute="width" constant="44" id="o41-4b-jjz"/>
+                                </constraints>
+                                <state key="normal" image="arrowBack"/>
+                                <connections>
+                                    <action selector="didTapBackButton:" destination="mOk-ht-fXS" eventType="touchUpInside" id="tdJ-Fo-vBk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="screenBackground"/>
+                        <constraints>
+                            <constraint firstItem="7MF-ZO-jhr" firstAttribute="top" secondItem="YYQ-R7-DKC" secondAttribute="bottom" constant="16" id="4ks-7n-CtT"/>
+                            <constraint firstItem="7MF-ZO-jhr" firstAttribute="leading" secondItem="CaA-Dm-xra" secondAttribute="leading" constant="40" id="9BY-oQ-DEw"/>
+                            <constraint firstItem="Pf1-tZ-XPc" firstAttribute="top" secondItem="nOx-aN-2yh" secondAttribute="top" constant="30" id="ATg-sg-MKQ"/>
+                            <constraint firstItem="CaA-Dm-xra" firstAttribute="trailing" secondItem="99Q-jP-XbT" secondAttribute="trailing" constant="40" id="HiP-Ju-CMv"/>
+                            <constraint firstItem="99Q-jP-XbT" firstAttribute="leading" secondItem="CaA-Dm-xra" secondAttribute="leading" constant="40" id="O3J-gE-NM0"/>
+                            <constraint firstItem="CaA-Dm-xra" firstAttribute="trailing" secondItem="kQv-wL-log" secondAttribute="trailing" constant="20" id="OMa-cD-CPq"/>
+                            <constraint firstItem="3C0-Oi-6nm" firstAttribute="top" secondItem="CaA-Dm-xra" secondAttribute="top" id="SgF-JB-woX"/>
+                            <constraint firstItem="dud-MY-IqY" firstAttribute="centerX" secondItem="CaA-Dm-xra" secondAttribute="centerX" id="Tsu-EX-0fk"/>
+                            <constraint firstItem="CaA-Dm-xra" firstAttribute="trailing" secondItem="YYQ-R7-DKC" secondAttribute="trailing" constant="20" id="Xfy-Ao-Lrv"/>
+                            <constraint firstItem="99Q-jP-XbT" firstAttribute="top" secondItem="kQv-wL-log" secondAttribute="bottom" constant="8" id="aYE-f0-V2l"/>
+                            <constraint firstItem="kQv-wL-log" firstAttribute="leading" secondItem="CaA-Dm-xra" secondAttribute="leading" constant="20" id="c6i-B8-8xU"/>
+                            <constraint firstItem="Pf1-tZ-XPc" firstAttribute="centerX" secondItem="CaA-Dm-xra" secondAttribute="centerX" id="cDt-TX-Clp"/>
+                            <constraint firstItem="dud-MY-IqY" firstAttribute="top" secondItem="Pf1-tZ-XPc" secondAttribute="bottom" id="cEL-yR-a11"/>
+                            <constraint firstItem="YYQ-R7-DKC" firstAttribute="leading" secondItem="CaA-Dm-xra" secondAttribute="leading" constant="20" id="dHj-BZ-lAF"/>
+                            <constraint firstItem="3C0-Oi-6nm" firstAttribute="centerX" secondItem="CaA-Dm-xra" secondAttribute="leading" constant="28" id="hgF-fy-O9G"/>
+                            <constraint firstItem="YYQ-R7-DKC" firstAttribute="top" secondItem="dud-MY-IqY" secondAttribute="bottom" constant="36" id="omc-Y9-TX7"/>
+                            <constraint firstItem="kQv-wL-log" firstAttribute="top" secondItem="7MF-ZO-jhr" secondAttribute="bottom" constant="32" id="vdm-NL-mqC"/>
+                            <constraint firstItem="CaA-Dm-xra" firstAttribute="trailing" secondItem="7MF-ZO-jhr" secondAttribute="trailing" constant="40" id="wgP-Jl-TUU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CaA-Dm-xra"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="enterCodeTextField" destination="YYQ-R7-DKC" id="snw-sN-P6C"/>
+                        <outlet property="logoLabel" destination="dud-MY-IqY" id="VsX-XL-mKF"/>
+                        <outlet property="numberLabel" destination="7MF-ZO-jhr" id="gwp-ud-XZd"/>
+                        <outlet property="sendAgainButton" destination="kQv-wL-log" id="2MM-bB-Kei"/>
+                        <outlet property="sendAgainLabel" destination="99Q-jP-XbT" id="ZBO-mU-dCz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MTG-fI-aU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159" y="-38"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowBack" width="16" height="16"/>
+        <image name="logo" width="92" height="108"/>
+        <namedColor name="DarkBlue">
+            <color red="0.22699999809265137" green="0.23899999260902405" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray">
+            <color red="0.4823529411764706" green="0.50980392156862742" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="screenBackground">
+            <color red="0.98431372549019602" green="0.98431372549019602" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

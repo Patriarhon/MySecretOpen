@@ -1,0 +1,249 @@
+/* 
+  Localizable.strings
+  My Secret
+
+  Created by Petr on 06.05.2020.
+  Copyright © 2020 Petr. All rights reserved.
+*/
+
+//MARK: - Common
+
+"ErrorTitle" = "Error";
+"WarningTitle" = "Warning";
+
+"Dairy" = "Dairy";
+"Search" = "Search";
+"Settings" = "Settings";
+"ForYou" = "For You";
+
+"delete" = "Delete";
+"save" = "Save";
+"cancel" = "Cancel";
+"done" = "Done";
+"edit" = "Edit";
+"view" = "View";
+
+"saveChanges" = "Save Changes";
+
+"Unable to open mail" = "Unable to open mail";
+
+// MARK: - AuthorizationModule ----------------
+
+"logoLabel" = "My Secret";
+"signUp" = "Sign Up";
+"registration" = "Registration";
+"privacyLabelBegin" = "By continuing to use this application, you agree to the ";
+"privacyLabelEnd" = "Privacy Policy";
+
+// MARK: - SignInController
+
+"welcomeLabel" = "Welcome to My Secret!";
+
+"phoneTextFieldPlaceholder" = "Enter your phone number";
+"emailTextFieldPlaceholder" = "Enter your E-mail";
+"passwordTextFieldPlaceholder" = "Password";
+
+"signInButton" = "Sign In";
+"forgotPasswordButton" = "Forgot your password?";
+"registrationButton" = "Quick Registration";
+
+"noAccountLabel" = "No account?";
+
+"IncorrectPhoneWarning" = "Phone number is incorrect";
+"IncorrectEmailWarning" = "E-mail is incorrect";
+"IncorrectPasswordWarning" = "Password must be at least 6 characters long";
+
+//MARK: InputCodeController
+
+"enterCodeTextFieldPlaceholder" = "Enter the received code";
+"numberLabelBegin" = "SMS code was sent on number ";
+"numberLabelEnd" = "";
+"sendAgainLabel" = "Didn't get the code?";
+"sendAgainButton" = "Resend";
+
+//MARK: - ForgotPasswordContrroller
+
+"passwordReset" = "Password reset";
+"resetButton" = "Reset";
+"passwordResetedWarning" = "The password reset instructions were sent to the specified E-mail";
+
+// MARK: - AuthWayView
+
+"phoneButton" = "Phone Number";
+"emailButton" = "E-mail";
+
+//MARK: - DairyModule ------------------------------
+
+"day" = "Day";
+"month" = "Month";
+"year" = "Year";
+
+"my Stories" = "My Stories";
+
+//MARK: - DairyController
+
+"emptyDairyLabel" = "You have not created any stories yet. Click the button in the lower right corner to create your first entry!";
+"deleteAlertTitle" = "Are you sure you want to delete this story?";
+
+//MARK: - NoteModule ----------------------
+
+"done" = "Done";
+"camera" = "Camera";
+"gallery" = "Gallery";
+
+//MARK: - StoryController
+
+"newStory" = "New Story";
+"editStory" = "Edit Story";
+"viewStory" = "View Story";
+"headingLabel" = "Write a title...";
+"locationLabel" = "Location";
+"thoughtsLabel" = "You can write your thoughts here ...";
+
+"heading" = "Heading";
+"place" = "Place";
+"thoughts" = "My thoughts";
+
+"saveButton" = "Save";
+
+"headingWarning" = "The title of the story must have at least three characters";
+
+"deletePhotoAlertTitle" = "Are you sure you want to delete this photo?";
+
+"Voice note of this day" = "Voice note of this day";
+
+"You have not given permission to use the microphone" = "You have not given permission to use the microphone";
+
+//MARK: - DateInputController
+
+"date" = "Date";
+
+//MARK: - TextInputController
+
+"saveColor" = "Save Color";
+"saveFont" = "Save Font";
+
+
+//MARK: - SearchController
+
+"history Search" = "History Search";
+"search" = "Search";
+"search by heading" = "Search by heading";
+"search by date" = "Search by date";
+"searchMonthDescription" = "If you want to find stories for the month, click the name of the month";
+
+"searchResultIsEmpty" = "No stories found with the specified search criteria";
+
+"daysOfWeek0" = "Mo";
+"daysOfWeek1" = "Tu";
+"daysOfWeek2" = "We";
+"daysOfWeek3" = "Th";
+"daysOfWeek4" = "Fr";
+"daysOfWeek5" = "Sa";
+"daysOfWeek6" = "Su";
+
+"January" = "January";
+"February" = "February";
+"March" = "March";
+"April" = "April";
+"May" = "May";
+"June" = "June";
+"July" = "July";
+"August" = "August";
+"September" = "September";
+"October" = "October";
+"November" = "November";
+"December" = "December";
+
+//MARK: SubscriptionController
+
+"error when purchase subscription" = "Error when purchase subscription";
+"premium" = "Premium";
+"rates" = "Rates";
+"popular" = "Popular";
+"benefit" = "Benefit";
+"subscription for 1 month" = "Subscription for 1 month - ";
+"subscription for 3 months" = "Subscription for 3 months - ";
+"subscription for 6 months" = "Subscription for 6 months - ";
+"buy forever" = "Buy forever - ";
+"buy" = "Buy";
+"free for 3 days" = "3 days - Free period";
+
+"price for month" = "price for month";
+
+"premiumImage" = "premiumEn";
+
+"photoLabel" = "Increase the number of photos";
+"videoLabel" = "Addition video";
+"audioLabel" = "Recording audio";
+
+"premiumAccess" = "Premium Access";
+"The cost - " = "The cost - ";
+
+"restore subscription" = "Restore premium";
+"premiumTrialDescription" = "Attention! After the end of the 3-day free trial period - The subscription is renewed automatically at the selected tariff. Unsubscribe anytime";
+
+"nothingRestore" = "You have no subscriptions to restore";
+"restoreError" = "Recovery error";
+"restoreSuccess" = "Subscription restored successfully";
+
+//MARK: - SettingsController
+
+"premium" = "Premium";
+"password Touch ID Face ID" = "Password Touch ID Face ID";
+"rate in App Store" = "Rate in App Store";
+"about App" = "About App";
+"support" = "Support";
+"privacy policy" = "Privacy Policy";
+"terms of use" = "Terms of Use";
+"remove all records" = "Remove all records";
+
+"Are you sure you want to delete all stories?" = "Are you sure you want to delete all stories?";
+"It will be impossible to restore them" = "It will be impossible to restore them";
+
+"Delete" = "Delete";
+"Cancel" = "Cancel";
+
+"All Stories deleted" = "All Stories deleted";
+
+//MARK: - Onboarding
+
+"step1Title" = "Customize your space for yourself";
+"step1Subtitle" = "Add photos, videos, listen to your voice recordings, as well as easily find the already saved recordings.";
+"step2Title" = "Reliable iCloud server";
+"step2Subtitle" = "All your recordings, videos, audios and photos are stored exclusively in your iCloud and only you own them.";
+"step3Title" = "Your data is under reliable protection";
+"step3Subtitle" = "Unique storage of data on the server and password code upon login";
+"begin" = "Begin";
+"skip" = "Skip";
+
+//MARK: - Biometric
+
+"story blocked" = "Story blocked";
+"subtitle begin" = "Use ";
+"subtitle end" = " to unlock";
+"button begin" = "Use ";
+
+//MARK: - TextController
+
+"terms" = "These terms and conditions outline the rules and regulations for the use of Diary “Story”
+By accessing to the Service, we assume you accept these terms and conditions in full. You may not use Diary “Story” if you do not accept all of the terms and conditions stated on this page.
+Basic Introduction
+In order to use the service or access the content, you are agreeing to the following terms and conditions.
+Diary “Story” does NOT claim ANY ownership rights in the text, files, images, photos, video, sounds, musical works, works of authorship, or any other materials (collectively, \"Content\") that you created, you are solely responsible for all the Content that you create using the Service.
+It is your responsibility to make sure your use of the Services is legal where you use them.
+
+And you retain the rights to all the Content you created.
+Modifications to These Items
+Diary “Story” reserves the right to alter these Terms at any time in its sole discretion. When we make material changes to the Terms, we’ll provide you with prominent notice in appropriate way, please make sure you have read the notice in advance carefully. Your continued use of the Diary “Story” Services after such notification of changes to the Terms will constitute your agreement and acceptance to such changes. You may stop using the Service under the new version of these Terms if you object to the changes.
+Copyright and Trademarks
+The Services provides users with the ability to create Content owned by yourselves. Peachy will not have any ownership rights in the works you created. You represent and warrant that you own the Content created by you.
+
+Diary “Story” Service is provided “AS IS” AND “AS AVAILABLE”, without express or implied warranty or condition of any kind. you use the Diary “Story” Service at your own risk. To the fullest extent permitted by applicable law, Diary “Story” and all owners of the content make no representations and disclaim any warranties or conditions of satisfactory quality, merchantability, fitness for a particular purpose, or non- infringement.
+Limitations of Liability
+In no event shall Diary “Story” be liable for any loss or damages (including without limitation of any direct, indirect, punitive, special, incidental or consequential loss or damage):
+- Access to the Service or inability to access to the Service; - Any third party's conduct, content, information or data;
+- Personal injury or property damage, of any nature whatsoever, resulting from your access to and/or use of (or your inability to access and use) the Diary “Story” Services, including, without limitation, making private content public or any damage caused to your computer or software or information stored thereon;
+- Any unauthorized access to or use of Diary “Story” Services and/or any and all personal, private, and/ or other information stored therein.
+Thank you for reading our Terms. Hope you enjoy Diary “Story”";
+"privacy" = "Protecting your privacy is important to us. We hope the following statement will help you understand how Diary “Story” deals with the personal identifiable information ('PII') you may occasionally provide to us via Internet. Generally, we do not collect any PII from you when you download our applications. To be specific, we do not require the consumers to get registered before downloading the application, nor do we keep track our application, we even don't have a Server to store such PII. the consumers' visits of Diary “Story” will never collect and store any face data when you use our application. And any PII can not be shared with any third parties. The only situation we may get access to your PIl is when you personally decide to email us your feedback or to provide us with a bug are strictly limited to your name, email address and your survey response only. port. The PIlI we may get from you in that situation In above situation, we guarantee that your PII will only be used for contacting you and improving our services. We will never use such information (e.g. your name and email address) for any other purposes, such as to further market our products, or to disclose your personal information to a third party for commercial gains. It should be noted that whether or not to send us your feedback or bug report is a completely voluntary initiative upon your own decision. If you have concern about your PII being misused, or if you want further information about our privacy policy and what it means, please feel free to email us in \"Setting\"- \"Feedback\", we will endeavor answers to your questions in a timely manner.";

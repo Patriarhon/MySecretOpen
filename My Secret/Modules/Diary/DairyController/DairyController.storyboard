@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dairy Controller-->
+        <scene sceneID="lX7-hX-HzL">
+            <objects>
+                <viewController storyboardIdentifier="DairyController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZWE-xB-Ibi" customClass="DairyController" customModule="Story" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nqb-LF-mGp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QG-Dw-04L">
+                                <rect key="frame" x="192.5" y="55.5" width="29.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="darkBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="45" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mjA-Gd-Jgb">
+                                <rect key="frame" x="0.0" y="92.5" width="414" height="803.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtA-S0-N3U">
+                                <rect key="frame" x="330" y="778" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="eCT-l0-Tvx"/>
+                                    <constraint firstAttribute="width" constant="64" id="oFM-2n-N6H"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="writeButton"/>
+                                <connections>
+                                    <action selector="writeButtonAction:" destination="ZWE-xB-Ibi" eventType="touchUpInside" id="rwg-6l-7j1"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIw-q3-6dU" customClass="RoundedShadowView" customModule="Story" customModuleProvider="target">
+                                <rect key="frame" x="40" y="406.5" width="334" height="93"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have not created any posts yet. Click the button in the lower right corner to create your first entry!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISP-uh-LPy" customClass="RoundedShadowLabel" customModule="Story" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="16" width="302" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="ISP-uh-LPy" firstAttribute="leading" secondItem="jIw-q3-6dU" secondAttribute="leading" constant="16" id="4Hu-HY-M6T"/>
+                                    <constraint firstItem="ISP-uh-LPy" firstAttribute="top" secondItem="jIw-q3-6dU" secondAttribute="top" constant="16" id="UeC-BZ-DID"/>
+                                    <constraint firstAttribute="trailing" secondItem="ISP-uh-LPy" secondAttribute="trailing" constant="16" id="fqN-SJ-bif"/>
+                                    <constraint firstAttribute="bottom" secondItem="ISP-uh-LPy" secondAttribute="bottom" constant="16" id="jPy-7Q-qlA"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMh-w9-H5p">
+                                <rect key="frame" x="362" y="48" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="bU7-yK-NIZ"/>
+                                    <constraint firstAttribute="width" constant="36" id="hlI-3W-yEs"/>
+                                </constraints>
+                                <state key="normal" image="SettingsOff"/>
+                                <connections>
+                                    <action selector="settingsButtonAction:" destination="ZWE-xB-Ibi" eventType="touchUpInside" id="H5A-a3-fkt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="screenBackground"/>
+                        <constraints>
+                            <constraint firstItem="HMh-w9-H5p" firstAttribute="centerY" secondItem="3QG-Dw-04L" secondAttribute="centerY" id="0fy-cF-fm4"/>
+                            <constraint firstItem="ws9-Uf-nrE" firstAttribute="bottom" secondItem="QtA-S0-N3U" secondAttribute="bottom" constant="20" id="46b-gO-gYb"/>
+                            <constraint firstItem="ws9-Uf-nrE" firstAttribute="trailing" secondItem="QtA-S0-N3U" secondAttribute="trailing" constant="20" id="6aL-IS-5Qe"/>
+                            <constraint firstItem="ws9-Uf-nrE" firstAttribute="trailing" secondItem="mjA-Gd-Jgb" secondAttribute="trailing" id="7Qb-KS-QZK"/>
+                            <constraint firstItem="jIw-q3-6dU" firstAttribute="centerY" secondItem="ws9-Uf-nrE" secondAttribute="centerY" id="AZ8-Nq-MWX"/>
+                            <constraint firstItem="mjA-Gd-Jgb" firstAttribute="top" secondItem="3QG-Dw-04L" secondAttribute="bottom" constant="16" id="NaT-QS-0ZW"/>
+                            <constraint firstItem="jIw-q3-6dU" firstAttribute="leading" secondItem="ws9-Uf-nrE" secondAttribute="leading" constant="40" id="P9W-Dg-co6"/>
+                            <constraint firstItem="ws9-Uf-nrE" firstAttribute="trailing" secondItem="jIw-q3-6dU" secondAttribute="trailing" constant="40" id="cPL-eY-YVw"/>
+                            <constraint firstAttribute="bottom" secondItem="mjA-Gd-Jgb" secondAttribute="bottom" id="eeu-SN-Hsp"/>
+                            <constraint firstItem="3QG-Dw-04L" firstAttribute="centerY" secondItem="ws9-Uf-nrE" secondAttribute="top" constant="22" id="jEc-6z-vTE"/>
+                            <constraint firstItem="ws9-Uf-nrE" firstAttribute="trailing" secondItem="HMh-w9-H5p" secondAttribute="trailing" constant="16" id="n1b-6m-PoJ"/>
+                            <constraint firstItem="3QG-Dw-04L" firstAttribute="centerX" secondItem="ws9-Uf-nrE" secondAttribute="centerX" id="oA7-n9-Weo"/>
+                            <constraint firstItem="mjA-Gd-Jgb" firstAttribute="leading" secondItem="ws9-Uf-nrE" secondAttribute="leading" id="qzz-pC-0h4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ws9-Uf-nrE"/>
+                    </view>
+                    <connections>
+                        <outlet property="emptyDairyLabel" destination="ISP-uh-LPy" id="QOo-ti-RUU"/>
+                        <outlet property="emptyDairyView" destination="jIw-q3-6dU" id="jZs-w8-Hvn"/>
+                        <outlet property="tableView" destination="mjA-Gd-Jgb" id="516-NK-nB9"/>
+                        <outlet property="titleLabel" destination="3QG-Dw-04L" id="dre-HS-0kx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwU-hj-28e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214" y="-196"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SettingsOff" width="24" height="24"/>
+        <image name="writeButton" width="64" height="64"/>
+        <namedColor name="darkBlue">
+            <color red="0.22699999809265137" green="0.23899999260902405" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="screenBackground">
+            <color red="0.98400002717971802" green="0.98400002717971802" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

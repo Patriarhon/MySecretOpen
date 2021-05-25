@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorPickerView" customModule="My_Secret" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="fZ4-2P-yGk" id="zDA-5v-yx1"/>
+                <outlet property="cancelLabel" destination="iJ1-QQ-wXL" id="qOU-nZ-aQ0"/>
+                <outlet property="colorPicker" destination="MH5-6E-pAx" id="Jcf-tF-JWF"/>
+                <outlet property="saveButton" destination="fok-zM-GHr" id="jSD-tI-f8C"/>
+                <outlet property="saveLabel" destination="Gt2-WQ-v0e" id="IIH-N8-YSW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="483" height="524"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MH5-6E-pAx" customClass="ColorPicker" customModule="Colorful">
+                    <rect key="frame" x="0.0" y="0.0" width="483" height="320"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="320" id="H0T-hB-TPi"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="5jA-sI-5fQ">
+                    <rect key="frame" x="148.5" y="336" width="186" height="62"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fok-zM-GHr" customClass="RoundedShadownButton" customModule="My_Secret" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="62" id="jXG-mf-9vE"/>
+                                <constraint firstAttribute="width" constant="62" id="uAL-7q-MOl"/>
+                            </constraints>
+                            <state key="normal" image="save">
+                                <color key="titleColor" name="white"/>
+                            </state>
+                            <connections>
+                                <action selector="saveButtonAction:" destination="-1" eventType="touchUpInside" id="acg-nG-xwG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZ4-2P-yGk" customClass="RoundedShadownButton" customModule="My_Secret" customModuleProvider="target">
+                            <rect key="frame" x="124" y="0.0" width="62" height="62"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="62" id="1kd-T9-Ug7"/>
+                                <constraint firstAttribute="width" constant="62" id="7Yn-AF-o6y"/>
+                            </constraints>
+                            <state key="normal" image="cancel">
+                                <color key="titleColor" name="white"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="-1" eventType="touchUpInside" id="3VF-JK-k78"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-WQ-v0e">
+                    <rect key="frame" x="162" y="408" width="35.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" name="darkBlue"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ1-QQ-wXL">
+                    <rect key="frame" x="286" y="408" width="35.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" name="darkBlue"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Gt2-WQ-v0e" firstAttribute="centerX" secondItem="fok-zM-GHr" secondAttribute="centerX" id="2gc-WY-Sxx"/>
+                <constraint firstItem="5jA-sI-5fQ" firstAttribute="top" secondItem="MH5-6E-pAx" secondAttribute="bottom" constant="16" id="Jdk-yu-yNI"/>
+                <constraint firstItem="iJ1-QQ-wXL" firstAttribute="top" secondItem="5jA-sI-5fQ" secondAttribute="bottom" constant="10" id="QMz-tE-Jt4"/>
+                <constraint firstItem="MH5-6E-pAx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TGx-s1-R2a"/>
+                <constraint firstAttribute="trailing" secondItem="MH5-6E-pAx" secondAttribute="trailing" id="Y16-69-wIg"/>
+                <constraint firstItem="Gt2-WQ-v0e" firstAttribute="top" secondItem="5jA-sI-5fQ" secondAttribute="bottom" constant="10" id="eyf-Ne-xWh"/>
+                <constraint firstItem="5jA-sI-5fQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gXh-GQ-9aG"/>
+                <constraint firstItem="MH5-6E-pAx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iqF-Cy-S5w"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Gt2-WQ-v0e" secondAttribute="bottom" constant="14" id="sv3-KW-SHP"/>
+                <constraint firstItem="iJ1-QQ-wXL" firstAttribute="centerX" secondItem="fZ4-2P-yGk" secondAttribute="centerX" id="tNT-gd-SaP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-209.42028985507247" y="82.366071428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cancel" width="20" height="20"/>
+        <image name="save" width="26" height="20"/>
+        <namedColor name="darkBlue">
+            <color red="0.22699999809265137" green="0.23899999260902405" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

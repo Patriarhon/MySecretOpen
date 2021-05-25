@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  My Secret
+
+  Created by Petr on 22.08.2020.
+  Copyright © 2020 Petr. All rights reserved.
+*/
+
+NSCameraUsageDescription = "The app needs access to the camera for you to create and store photos and videos in stories";
+NSMicrophoneUsageDescription = "The app needs access to a microphone in order for you to create and store audio recordings in your stories";
+NSFaceIDUsageDescription = "The app needs access to Face ID in order to sign in to the app with it";

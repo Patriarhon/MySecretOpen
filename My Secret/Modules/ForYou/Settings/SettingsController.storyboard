@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings Controller-->
+        <scene sceneID="aK7-b7-ecs">
+            <objects>
+                <viewController storyboardIdentifier="SettingsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vjc-Er-3iZ" customClass="SettingsController" customModule="My_Secret" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6ab-Ts-XL3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundS" translatesAutoresizingMaskIntoConstraints="NO" id="cYe-zw-uv2">
+                                <rect key="frame" x="24" y="44" width="366" height="818"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для вас" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVU-ta-cFo">
+                                <rect key="frame" x="175.5" y="60" width="63.5" height="20"/>
+                                <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                                <color key="textColor" name="darkBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6c-AL-zpg">
+                                <rect key="frame" x="16" y="52" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="S6o-QB-qsP"/>
+                                    <constraint firstAttribute="height" constant="36" id="TfG-HV-PAC"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="vjc-Er-3iZ" eventType="touchUpInside" id="SU2-Qf-O2H"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Be-dI-AeQ">
+                                <rect key="frame" x="0.0" y="98" width="414" height="764"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DfG-fz-plJ" firstAttribute="bottom" secondItem="8Be-dI-AeQ" secondAttribute="bottom" id="6hV-nP-flt"/>
+                            <constraint firstItem="DfG-fz-plJ" firstAttribute="bottom" secondItem="cYe-zw-uv2" secondAttribute="bottom" id="74b-Tu-cWm"/>
+                            <constraint firstItem="UVU-ta-cFo" firstAttribute="centerX" secondItem="DfG-fz-plJ" secondAttribute="centerX" id="9Ha-lD-rDS"/>
+                            <constraint firstItem="DfG-fz-plJ" firstAttribute="trailing" secondItem="8Be-dI-AeQ" secondAttribute="trailing" id="A8p-VA-fgF"/>
+                            <constraint firstItem="DfG-fz-plJ" firstAttribute="trailing" secondItem="cYe-zw-uv2" secondAttribute="trailing" constant="24" id="KDI-Yw-blb"/>
+                            <constraint firstItem="8Be-dI-AeQ" firstAttribute="leading" secondItem="DfG-fz-plJ" secondAttribute="leading" id="Rid-Sk-55t"/>
+                            <constraint firstItem="8Be-dI-AeQ" firstAttribute="top" secondItem="O6c-AL-zpg" secondAttribute="bottom" constant="10" id="X1P-4k-h9G"/>
+                            <constraint firstItem="O6c-AL-zpg" firstAttribute="leading" secondItem="DfG-fz-plJ" secondAttribute="leading" constant="16" id="b4F-HA-atM"/>
+                            <constraint firstItem="UVU-ta-cFo" firstAttribute="top" secondItem="DfG-fz-plJ" secondAttribute="top" constant="16" id="hGY-4u-Or7"/>
+                            <constraint firstItem="O6c-AL-zpg" firstAttribute="centerY" secondItem="UVU-ta-cFo" secondAttribute="centerY" id="lwP-DN-YfT"/>
+                            <constraint firstItem="cYe-zw-uv2" firstAttribute="top" secondItem="DfG-fz-plJ" secondAttribute="top" id="npZ-4h-d3X"/>
+                            <constraint firstItem="cYe-zw-uv2" firstAttribute="leading" secondItem="DfG-fz-plJ" secondAttribute="leading" constant="24" id="xeo-U5-Pup"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DfG-fz-plJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="8Be-dI-AeQ" id="sYk-xo-L9f"/>
+                        <outlet property="titleLabel" destination="UVU-ta-cFo" id="gZR-jd-zo2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="42a-dK-YN5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="12" height="20"/>
+        <image name="backgroundS" width="333" height="451"/>
+        <namedColor name="darkBlue">
+            <color red="0.22699999809265137" green="0.23899999260902405" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

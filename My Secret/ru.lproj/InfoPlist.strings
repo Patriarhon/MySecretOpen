@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  My Secret
+
+  Created by Petr on 22.08.2020.
+  Copyright © 2020 Petr. All rights reserved.
+*/
+
+NSCameraUsageDescription = "Приложению необходим доступ к камере, чтобы вы могли создавть и хранить в историях фото и видео";
+NSMicrophoneUsageDescription = "Приложению необходим доступ к микрофону, чтобы вы могли создавть и хранить в историях аудиозаписи";
+NSFaceIDUsageDescription = "Приложению необходим доступ к Face ID, чтобы вы могли входить в приложение с его помощью";

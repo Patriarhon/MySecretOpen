@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Story Controller-->
+        <scene sceneID="6KT-11-7qx">
+            <objects>
+                <viewController storyboardIdentifier="StoryController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RZL-EP-lyc" customClass="StoryController" customModule="My_Secret" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uqK-TC-N8I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZJ-AX-eG7">
+                                <rect key="frame" x="8" y="52" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MOH-bR-i8r"/>
+                                    <constraint firstAttribute="width" constant="44" id="heT-tv-7R1"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButtonAction:" destination="RZL-EP-lyc" eventType="touchUpInside" id="bPn-cw-uHk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jN2-u8-fTF">
+                                <rect key="frame" x="169" y="64" width="76" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="DarkBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kuX-H0-NsU">
+                                <rect key="frame" x="0.0" y="111.5" width="414" height="664.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrr-la-Xrk" customClass="MainButton" customModule="My_Secret" customModuleProvider="target">
+                                <rect key="frame" x="40" y="792" width="334" height="54"/>
+                                <color key="backgroundColor" name="lightGray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Cft-Xv-01r"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Save changes">
+                                    <color key="titleColor" name="white"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="RZL-EP-lyc" eventType="touchUpInside" id="TLe-e4-iT3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xt1-me-SdH" customClass="RoundedShadownButton" customModule="My_Secret" customModuleProvider="target">
+                                <rect key="frame" x="338" y="700" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="GYr-8U-ELx"/>
+                                    <constraint firstAttribute="height" constant="56" id="bp4-bh-zwg"/>
+                                </constraints>
+                                <state key="normal" image="edit"/>
+                                <connections>
+                                    <action selector="editButtonAction:" destination="RZL-EP-lyc" eventType="touchUpInside" id="mBA-sJ-xHl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BP8-Bw-WA3">
+                                <rect key="frame" x="362" y="52" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="PoU-mD-uVA"/>
+                                    <constraint firstAttribute="width" constant="44" id="lFE-oz-zyq"/>
+                                </constraints>
+                                <state key="normal" image="grayDelete"/>
+                                <connections>
+                                    <action selector="deleteButtonAction:" destination="RZL-EP-lyc" eventType="touchUpInside" id="dpp-z1-kmW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSB-XN-iwS" customClass="VoiceButton" customModule="My_Secret" customModuleProvider="target">
+                                <rect key="frame" x="310" y="664" width="112" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="i0f-G6-ly8"/>
+                                    <constraint firstAttribute="height" constant="112" id="qgC-0e-nCI"/>
+                                </constraints>
+                                <state key="normal" image="microphone"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="56"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="microphoneButtonTouchCancel:" destination="RZL-EP-lyc" eventType="touchCancel" id="QdS-bf-bvz"/>
+                                    <action selector="microphoneButtonTouchDown:" destination="RZL-EP-lyc" eventType="touchDown" id="rip-uu-eE3"/>
+                                    <action selector="microphoneButtonTouchDragExit:" destination="RZL-EP-lyc" eventType="touchDragExit" id="Lqs-Gz-0Gi"/>
+                                    <action selector="microphoneButtonTouchDragOutside:" destination="RZL-EP-lyc" eventType="touchDragOutside" id="BNn-qa-NmM"/>
+                                    <action selector="microphoneButtonTouchUpInside:" destination="RZL-EP-lyc" eventType="touchUpInside" id="1Kx-bg-oyO"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxk-j1-GgZ">
+                                <rect key="frame" x="20" y="712" width="51.5" height="16"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7r-fa-3E5">
+                                        <rect key="frame" x="0.0" y="2" width="12" height="12"/>
+                                        <color key="backgroundColor" name="red"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="vOf-0e-3nx"/>
+                                            <constraint firstAttribute="width" constant="12" id="wHD-AD-Dn5"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48g-mE-xMY">
+                                        <rect key="frame" x="24" y="0.0" width="27.5" height="16"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                                        <color key="textColor" name="gray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="48g-mE-xMY" firstAttribute="top" secondItem="uxk-j1-GgZ" secondAttribute="top" id="Duj-P8-GPC"/>
+                                    <constraint firstItem="48g-mE-xMY" firstAttribute="leading" secondItem="Q7r-fa-3E5" secondAttribute="trailing" constant="12" id="RU7-Uw-sWx"/>
+                                    <constraint firstItem="Q7r-fa-3E5" firstAttribute="centerY" secondItem="uxk-j1-GgZ" secondAttribute="centerY" id="SoE-0x-pZM"/>
+                                    <constraint firstItem="Q7r-fa-3E5" firstAttribute="leading" secondItem="uxk-j1-GgZ" secondAttribute="leading" id="ZoR-En-5PV"/>
+                                    <constraint firstAttribute="trailing" secondItem="48g-mE-xMY" secondAttribute="trailing" id="iWA-Yd-MAu"/>
+                                    <constraint firstAttribute="bottom" secondItem="48g-mE-xMY" secondAttribute="bottom" id="vd6-wk-5NX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="screenBackground"/>
+                        <constraints>
+                            <constraint firstItem="jN2-u8-fTF" firstAttribute="centerX" secondItem="6Ys-EH-01b" secondAttribute="centerX" id="0a2-BK-LTe"/>
+                            <constraint firstItem="6Ys-EH-01b" firstAttribute="trailing" secondItem="Yrr-la-Xrk" secondAttribute="trailing" constant="40" id="2Wb-Pf-AKa"/>
+                            <constraint firstAttribute="trailing" secondItem="kuX-H0-NsU" secondAttribute="trailing" id="9KF-0M-DNJ"/>
+                            <constraint firstItem="AZJ-AX-eG7" firstAttribute="leading" secondItem="6Ys-EH-01b" secondAttribute="leading" constant="8" id="Kpq-0X-BcP"/>
+                            <constraint firstItem="kuX-H0-NsU" firstAttribute="leading" secondItem="uqK-TC-N8I" secondAttribute="leading" id="NQf-4T-hIC"/>
+                            <constraint firstItem="6Ys-EH-01b" firstAttribute="trailing" secondItem="BP8-Bw-WA3" secondAttribute="trailing" constant="8" id="Om6-ce-eqj"/>
+                            <constraint firstItem="6Ys-EH-01b" firstAttribute="trailing" secondItem="zSB-XN-iwS" secondAttribute="centerX" constant="48" id="SgC-GH-nbQ"/>
+                            <constraint firstItem="Yrr-la-Xrk" firstAttribute="top" secondItem="zSB-XN-iwS" secondAttribute="centerY" constant="72" id="TrH-hh-ED3"/>
+                            <constraint firstItem="BP8-Bw-WA3" firstAttribute="top" secondItem="6Ys-EH-01b" secondAttribute="top" constant="8" id="VBF-qZ-kmI"/>
+                            <constraint firstItem="kuX-H0-NsU" firstAttribute="bottom" secondItem="Xt1-me-SdH" secondAttribute="bottom" constant="20" id="VTa-a7-L4R"/>
+                            <constraint firstItem="uxk-j1-GgZ" firstAttribute="leading" secondItem="6Ys-EH-01b" secondAttribute="leading" constant="20" id="Z31-ZM-tTY"/>
+                            <constraint firstItem="6Ys-EH-01b" firstAttribute="trailing" secondItem="Xt1-me-SdH" secondAttribute="trailing" constant="20" id="biZ-Yw-0Bf"/>
+                            <constraint firstItem="6Ys-EH-01b" firstAttribute="bottom" secondItem="kuX-H0-NsU" secondAttribute="bottom" constant="86" id="c4X-dy-qfE"/>
+                            <constraint firstItem="uxk-j1-GgZ" firstAttribute="centerY" secondItem="zSB-XN-iwS" secondAttribute="centerY" id="ifW-BE-qNS"/>
+                            <constraint firstItem="kuX-H0-NsU" firstAttribute="top" secondItem="jN2-u8-fTF" secondAttribute="bottom" constant="27" id="slE-6r-jZH"/>
+                            <constraint firstItem="AZJ-AX-eG7" firstAttribute="top" secondItem="6Ys-EH-01b" secondAttribute="top" constant="8" id="uyx-9U-Eos"/>
+                            <constraint firstItem="6Ys-EH-01b" firstAttribute="bottom" secondItem="Yrr-la-Xrk" secondAttribute="bottom" constant="16" id="w35-WJ-M24"/>
+                            <constraint firstItem="Yrr-la-Xrk" firstAttribute="leading" secondItem="6Ys-EH-01b" secondAttribute="leading" constant="40" id="xil-AO-uej"/>
+                            <constraint firstItem="jN2-u8-fTF" firstAttribute="centerY" secondItem="AZJ-AX-eG7" secondAttribute="centerY" id="yV8-KN-zeV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Ys-EH-01b"/>
+                    </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="BP8-Bw-WA3" id="FpU-b8-tyq"/>
+                        <outlet property="editButton" destination="Xt1-me-SdH" id="MPG-bG-gCG"/>
+                        <outlet property="microphoneButton" destination="zSB-XN-iwS" id="R3M-Fm-eQT"/>
+                        <outlet property="recordingTimeLabel" destination="48g-mE-xMY" id="Hhc-3N-HWQ"/>
+                        <outlet property="recordingView" destination="uxk-j1-GgZ" id="5ZF-eZ-TbQ"/>
+                        <outlet property="saveButton" destination="Yrr-la-Xrk" id="E45-sT-Tmp"/>
+                        <outlet property="tableView" destination="kuX-H0-NsU" id="mMA-Rh-79Q"/>
+                        <outlet property="tableViewBottomConstraint" destination="c4X-dy-qfE" id="Cam-Wi-0RA"/>
+                        <outlet property="titleLabel" destination="jN2-u8-fTF" id="tQl-RH-yzo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbI-fo-dh2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="16" height="16"/>
+        <image name="edit" width="24" height="24"/>
+        <image name="grayDelete" width="17" height="23"/>
+        <image name="microphone" width="24" height="24"/>
+        <namedColor name="DarkBlue">
+            <color red="0.22699999809265137" green="0.23899999260902405" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray">
+            <color red="0.4823529411764706" green="0.50980392156862742" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGray">
+            <color red="0.7686274509803922" green="0.78431372549019607" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="red">
+            <color red="0.92199999094009399" green="0.34099999070167542" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="screenBackground">
+            <color red="0.98400002717971802" green="0.98400002717971802" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

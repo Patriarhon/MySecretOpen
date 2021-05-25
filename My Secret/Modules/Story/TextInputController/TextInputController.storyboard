@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Text Input Controller-->
+        <scene sceneID="PaY-ew-fo8">
+            <objects>
+                <viewController storyboardIdentifier="TextInputController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Q3a-Yw-ckc" customClass="TextInputController" customModule="My_Secret" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q6P-13-uU1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Heading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CJ-wp-c18">
+                                <rect key="frame" x="105" y="64" width="232" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1x-hj-mE8">
+                                <rect key="frame" x="20" y="52" width="69" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hJP-39-hTv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="-8" maxY="0.0"/>
+                                <state key="normal" title="Cancel" image="close">
+                                    <color key="titleColor" name="gray"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonAction:" destination="Q3a-Yw-ckc" eventType="touchUpInside" id="uPB-hD-T3I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpr-wO-J8g">
+                                <rect key="frame" x="353" y="52" width="41" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rns-KG-KXy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" name="Gray"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonAction:" destination="Q3a-Yw-ckc" eventType="touchUpInside" id="mow-ea-kK1"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E8P-bd-KxU">
+                                <rect key="frame" x="20" y="112" width="374" height="674"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="IBg-HP-igw">
+                                <rect key="frame" x="147" y="802" width="120" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOa-T3-yBQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="G0b-JF-2ia"/>
+                                            <constraint firstAttribute="width" constant="44" id="Grk-gS-LbY"/>
+                                        </constraints>
+                                        <state key="normal" image="colorPicker"/>
+                                        <connections>
+                                            <action selector="colorButtonAction:" destination="Q3a-Yw-ckc" eventType="touchUpInside" id="hcn-zJ-gXi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sg6-Bn-LaD">
+                                        <rect key="frame" x="76" y="0.0" width="44" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="CHy-cn-18s"/>
+                                            <constraint firstAttribute="width" constant="44" id="XOX-XE-ajK"/>
+                                        </constraints>
+                                        <state key="normal" image="fontPicker"/>
+                                        <connections>
+                                            <action selector="fontButtonAction:" destination="Q3a-Yw-ckc" eventType="touchUpInside" id="7eV-CC-6lY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEH-XF-Djf">
+                                <rect key="frame" x="365.5" y="817" width="32.5" height="14.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="LightGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="screenBackground"/>
+                        <constraints>
+                            <constraint firstItem="t1x-hj-mE8" firstAttribute="top" secondItem="BDb-Px-eTF" secondAttribute="top" constant="8" id="9NB-TM-N3g"/>
+                            <constraint firstItem="8CJ-wp-c18" firstAttribute="leading" secondItem="t1x-hj-mE8" secondAttribute="trailing" constant="16" id="BDB-E2-ADv"/>
+                            <constraint firstItem="IBg-HP-igw" firstAttribute="top" secondItem="E8P-bd-KxU" secondAttribute="bottom" constant="16" id="CEu-Is-sCj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E8P-bd-KxU" secondAttribute="trailing" id="Xee-FX-s4D"/>
+                            <constraint firstItem="IBg-HP-igw" firstAttribute="centerX" secondItem="BDb-Px-eTF" secondAttribute="centerX" id="bOI-ho-l8F"/>
+                            <constraint firstItem="E8P-bd-KxU" firstAttribute="top" secondItem="t1x-hj-mE8" secondAttribute="bottom" constant="16" id="cgF-KY-iy5"/>
+                            <constraint firstItem="t1x-hj-mE8" firstAttribute="leading" secondItem="q6P-13-uU1" secondAttribute="leading" constant="20" id="hh8-UN-dGR"/>
+                            <constraint firstItem="Fpr-wO-J8g" firstAttribute="leading" secondItem="8CJ-wp-c18" secondAttribute="trailing" constant="16" id="n1S-td-XDO"/>
+                            <constraint firstItem="BDb-Px-eTF" firstAttribute="trailing" secondItem="mEH-XF-Djf" secondAttribute="trailing" constant="16" id="qxZ-AC-mvI"/>
+                            <constraint firstAttribute="trailing" secondItem="Fpr-wO-J8g" secondAttribute="trailing" constant="20" id="r2n-1b-PMb"/>
+                            <constraint firstItem="mEH-XF-Djf" firstAttribute="centerY" secondItem="IBg-HP-igw" secondAttribute="centerY" id="sAf-bj-X2I"/>
+                            <constraint firstItem="8CJ-wp-c18" firstAttribute="centerY" secondItem="t1x-hj-mE8" secondAttribute="centerY" id="uh3-JC-o1T"/>
+                            <constraint firstItem="Fpr-wO-J8g" firstAttribute="top" secondItem="BDb-Px-eTF" secondAttribute="top" constant="8" id="xOg-cq-zPL"/>
+                            <constraint firstItem="E8P-bd-KxU" firstAttribute="leading" secondItem="q6P-13-uU1" secondAttribute="leadingMargin" id="yNg-eK-VyB"/>
+                            <constraint firstItem="BDb-Px-eTF" firstAttribute="bottom" secondItem="IBg-HP-igw" secondAttribute="bottom" constant="16" id="ymt-o4-7g1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BDb-Px-eTF"/>
+                    </view>
+                    <connections>
+                        <outlet property="bodyTextView" destination="E8P-bd-KxU" id="wxA-xv-Gs7"/>
+                        <outlet property="cancelButton" destination="t1x-hj-mE8" id="flq-Qw-dic"/>
+                        <outlet property="doneButton" destination="Fpr-wO-J8g" id="LBE-x9-02f"/>
+                        <outlet property="limitLabel" destination="mEH-XF-Djf" id="Tdf-Be-7CD"/>
+                        <outlet property="stackViewBottomConstraint" destination="ymt-o4-7g1" id="h28-Ot-MBi"/>
+                        <outlet property="titleLabel" destination="8CJ-wp-c18" id="yac-bP-6Zw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgG-pK-OZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="16" height="16"/>
+        <image name="colorPicker" width="44" height="44"/>
+        <image name="fontPicker" width="44" height="44"/>
+        <namedColor name="Gray">
+            <color red="0.4823529411764706" green="0.50980392156862742" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGray">
+            <color red="0.7686274509803922" green="0.78431372549019607" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray">
+            <color red="0.4823529411764706" green="0.50980392156862742" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="screenBackground">
+            <color red="0.98400002717971802" green="0.98400002717971802" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

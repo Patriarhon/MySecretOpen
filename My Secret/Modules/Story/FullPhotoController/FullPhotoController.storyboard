@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Full Photo Controller-->
+        <scene sceneID="ozg-Fp-JoX">
+            <objects>
+                <viewController storyboardIdentifier="FullPhotoController" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hme-sc-IbB" customClass="FullPhotoController" customModule="My_Secret" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uth-gw-tYX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2G6-Uj-2ge">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UuH-aL-SAF">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="UuH-aL-SAF" secondAttribute="bottom" id="BSY-Ql-gkV"/>
+                                    <constraint firstItem="UuH-aL-SAF" firstAttribute="leading" secondItem="2G6-Uj-2ge" secondAttribute="leading" id="MPD-FQ-YZl"/>
+                                    <constraint firstItem="UuH-aL-SAF" firstAttribute="top" secondItem="2G6-Uj-2ge" secondAttribute="top" id="QuI-3m-vMB"/>
+                                    <constraint firstItem="UuH-aL-SAF" firstAttribute="centerY" secondItem="2G6-Uj-2ge" secondAttribute="centerY" id="SPx-20-UCI"/>
+                                    <constraint firstAttribute="trailing" secondItem="UuH-aL-SAF" secondAttribute="trailing" id="XBI-i7-9Vv"/>
+                                    <constraint firstItem="UuH-aL-SAF" firstAttribute="centerX" secondItem="2G6-Uj-2ge" secondAttribute="centerX" id="iGq-6g-vRc"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-cq-bgq">
+                                <rect key="frame" x="18" y="58" width="36" height="40"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="f3j-lf-2Q1"/>
+                                    <constraint firstAttribute="width" constant="36" id="xd3-NM-dWE"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="didTapBackButton:" destination="Hme-sc-IbB" eventType="touchUpInside" id="Ow3-Pq-PhF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nq1-T5-Umi">
+                                <rect key="frame" x="360" y="58" width="36" height="40"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="Mg2-pY-t0i"/>
+                                    <constraint firstAttribute="height" constant="40" id="hgD-PK-9Li"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="delete"/>
+                                <connections>
+                                    <action selector="deleteButtonAction:" destination="Hme-sc-IbB" eventType="touchUpInside" id="sc3-kY-FqW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2G6-Uj-2ge" secondAttribute="trailing" id="5xr-lT-dYA"/>
+                            <constraint firstItem="aFo-cq-bgq" firstAttribute="leading" secondItem="QSH-NE-lHr" secondAttribute="leading" constant="18" id="9sl-kb-kl9"/>
+                            <constraint firstAttribute="bottom" secondItem="2G6-Uj-2ge" secondAttribute="bottom" id="BR0-A3-vgd"/>
+                            <constraint firstItem="2G6-Uj-2ge" firstAttribute="top" secondItem="Uth-gw-tYX" secondAttribute="top" id="HP3-Fp-ce6"/>
+                            <constraint firstItem="aFo-cq-bgq" firstAttribute="top" secondItem="QSH-NE-lHr" secondAttribute="top" constant="14" id="UMg-YZ-QZ5"/>
+                            <constraint firstItem="nq1-T5-Umi" firstAttribute="top" secondItem="QSH-NE-lHr" secondAttribute="top" constant="14" id="eNF-HE-Lzt"/>
+                            <constraint firstItem="2G6-Uj-2ge" firstAttribute="leading" secondItem="Uth-gw-tYX" secondAttribute="leading" id="hnL-zn-At1"/>
+                            <constraint firstItem="QSH-NE-lHr" firstAttribute="trailing" secondItem="nq1-T5-Umi" secondAttribute="trailing" constant="18" id="mId-l6-v2x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QSH-NE-lHr"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="QsK-wZ-6J1" appends="YES" id="kQL-Mo-AHV"/>
+                            <outletCollection property="gestureRecognizers" destination="M3S-PI-QdD" appends="YES" id="eSp-Um-aoF"/>
+                            <outletCollection property="gestureRecognizers" destination="sL9-L1-ep7" appends="YES" id="Afw-LX-7Gy"/>
+                            <outletCollection property="gestureRecognizers" destination="wqZ-71-QVX" appends="YES" id="I7H-WO-2H0"/>
+                        </connections>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="deleteButton" destination="nq1-T5-Umi" id="rnN-VN-Z8Q"/>
+                        <outlet property="imageView" destination="UuH-aL-SAF" id="hfb-qY-Qa3"/>
+                        <outlet property="scrollView" destination="2G6-Uj-2ge" id="gtL-l3-KUd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="syZ-eE-woM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="QsK-wZ-6J1">
+                    <connections>
+                        <action selector="didSwipe:" destination="Hme-sc-IbB" id="fjW-Hf-x5n"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="M3S-PI-QdD">
+                    <connections>
+                        <action selector="didSwipe:" destination="Hme-sc-IbB" id="S1c-jY-293"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="sL9-L1-ep7">
+                    <connections>
+                        <action selector="didSwipe:" destination="Hme-sc-IbB" id="GwV-Ku-34c"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="wqZ-71-QVX">
+                    <connections>
+                        <action selector="didSwipe:" destination="Hme-sc-IbB" id="kIX-Dn-2zO"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-143" y="156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="16" height="16"/>
+        <image name="delete" width="17" height="23"/>
+    </resources>
+</document>

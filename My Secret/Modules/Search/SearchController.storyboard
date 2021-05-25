@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Controller-->
+        <scene sceneID="0gb-I0-16o">
+            <objects>
+                <viewController storyboardIdentifier="SearchController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iKy-6G-iRX" customClass="SearchController" customModule="Story" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PFg-kI-IzX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScY-Do-vB4">
+                                <rect key="frame" x="192.5" y="55.5" width="29.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="darkBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="45" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XXh-cy-gYU">
+                                <rect key="frame" x="0.0" y="92.5" width="414" height="803.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtR-j8-Sce">
+                                <rect key="frame" x="330" y="778" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="k7z-ym-wNl"/>
+                                    <constraint firstAttribute="width" constant="64" id="kPw-da-I3b"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="writeButton"/>
+                                <connections>
+                                    <action selector="writeButtonAction:" destination="iKy-6G-iRX" eventType="touchUpInside" id="1a6-hU-7wK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="screenBackground"/>
+                        <constraints>
+                            <constraint firstItem="XXh-cy-gYU" firstAttribute="top" secondItem="ScY-Do-vB4" secondAttribute="bottom" constant="16" id="1Qa-7A-9At"/>
+                            <constraint firstItem="VKH-fv-cRo" firstAttribute="trailing" secondItem="QtR-j8-Sce" secondAttribute="trailing" constant="20" id="AgG-Jl-h8r"/>
+                            <constraint firstItem="XXh-cy-gYU" firstAttribute="leading" secondItem="VKH-fv-cRo" secondAttribute="leading" id="C84-ft-qfo"/>
+                            <constraint firstItem="VKH-fv-cRo" firstAttribute="bottom" secondItem="QtR-j8-Sce" secondAttribute="bottom" constant="20" id="QEn-3J-zKg"/>
+                            <constraint firstItem="ScY-Do-vB4" firstAttribute="centerY" secondItem="VKH-fv-cRo" secondAttribute="top" constant="22" id="WHb-aq-Lf1"/>
+                            <constraint firstItem="ScY-Do-vB4" firstAttribute="centerX" secondItem="VKH-fv-cRo" secondAttribute="centerX" id="igx-Wr-kYv"/>
+                            <constraint firstAttribute="bottom" secondItem="XXh-cy-gYU" secondAttribute="bottom" id="k9B-cP-CeH"/>
+                            <constraint firstItem="VKH-fv-cRo" firstAttribute="trailing" secondItem="XXh-cy-gYU" secondAttribute="trailing" id="m32-fV-5ec"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VKH-fv-cRo"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="XXh-cy-gYU" id="fLk-2E-qRg"/>
+                        <outlet property="titleLabel" destination="ScY-Do-vB4" id="zf6-Gk-nxv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5B-Ef-3ak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214" y="-196"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="writeButton" width="64" height="64"/>
+        <namedColor name="darkBlue">
+            <color red="0.22699999809265137" green="0.23899999260902405" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="screenBackground">
+            <color red="0.98400002717971802" green="0.98400002717971802" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

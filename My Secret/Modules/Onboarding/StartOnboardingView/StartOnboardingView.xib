@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartOnboardingView" customModule="My_Secret" customModuleProvider="target">
+            <connections>
+                <outlet property="subtitleLabel" destination="Yro-Ip-2BD" id="MbI-nm-9hW"/>
+                <outlet property="titleLabel" destination="omB-BL-2bK" id="mTc-5a-22B"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="step1" translatesAutoresizingMaskIntoConstraints="NO" id="kUq-yk-OmS">
+                    <rect key="frame" x="65.5" y="68" width="189" height="189"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="kUq-yk-OmS" secondAttribute="height" multiplier="1:1" id="bxC-uR-917"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Настрой своё пространство под себя" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omB-BL-2bK">
+                    <rect key="frame" x="20" y="324" width="280" height="56"/>
+                    <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="24"/>
+                    <color key="textColor" name="darkBlue"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Добавляйте фото, видео, прослушивайте свои голосовые записи, а так же с легкостью находите уже сохраненные записи." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yro-Ip-2BD">
+                    <rect key="frame" x="20" y="392" width="280" height="70"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                    <color key="textColor" name="gray"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="H6V-7g-Amm">
+                    <rect key="frame" x="140.5" y="287" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" name="gray"/>
+                    <color key="currentPageIndicatorTintColor" name="orange"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Yro-Ip-2BD" secondAttribute="bottom" constant="106" id="4gQ-3a-j9U"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Yro-Ip-2BD" secondAttribute="trailing" constant="20" id="5DF-vE-Aye"/>
+                <constraint firstItem="H6V-7g-Amm" firstAttribute="top" secondItem="kUq-yk-OmS" secondAttribute="bottom" constant="30" id="7ti-OR-GPS"/>
+                <constraint firstItem="kUq-yk-OmS" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="GtI-QN-7Oy"/>
+                <constraint firstItem="H6V-7g-Amm" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="HxT-cV-n3e"/>
+                <constraint firstItem="Yro-Ip-2BD" firstAttribute="top" secondItem="omB-BL-2bK" secondAttribute="bottom" constant="12" id="JdE-fm-4le"/>
+                <constraint firstItem="Yro-Ip-2BD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="KaE-ON-GR0"/>
+                <constraint firstItem="omB-BL-2bK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="OtN-v4-p7X"/>
+                <constraint firstItem="kUq-yk-OmS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" priority="253" constant="5" id="PZG-u8-Xoe"/>
+                <constraint firstAttribute="trailing" secondItem="omB-BL-2bK" secondAttribute="trailing" constant="20" id="g9C-fd-siy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kUq-yk-OmS" secondAttribute="trailing" priority="253" constant="5" id="jo5-z7-WCz"/>
+                <constraint firstItem="kUq-yk-OmS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="68" id="r7T-hk-y9S"/>
+                <constraint firstItem="omB-BL-2bK" firstAttribute="top" secondItem="kUq-yk-OmS" secondAttribute="bottom" constant="67" id="xlw-O8-iOD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="145"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="step1" width="366" height="366"/>
+        <namedColor name="darkBlue">
+            <color red="0.22699999809265137" green="0.23899999260902405" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray">
+            <color red="0.4823529411764706" green="0.50980392156862742" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="orange">
+            <color red="1" green="0.70599997043609619" blue="0.14499999582767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

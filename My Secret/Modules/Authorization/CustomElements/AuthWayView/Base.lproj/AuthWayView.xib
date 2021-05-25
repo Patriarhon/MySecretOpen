@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthWayView" customModule="My_Secret" customModuleProvider="target">
+            <connections>
+                <outlet property="indicatorView" destination="gFc-H8-QFA" id="Oqt-DZ-LPK"/>
+                <outletCollection property="modeButtons" destination="0jY-HP-uNl" collectionClass="NSMutableArray" id="lPH-3S-Vav"/>
+                <outletCollection property="modeButtons" destination="AAp-B7-DOd" collectionClass="NSMutableArray" id="DSB-F9-07A"/>
+                <outletCollection property="indicatorCenterXConstraints" destination="F6J-lU-Nd2" collectionClass="NSMutableArray" id="wP8-4p-DE7"/>
+                <outletCollection property="indicatorCenterXConstraints" destination="PwP-Bi-guI" collectionClass="NSMutableArray" id="RVV-S0-5Zp"/>
+                <outletCollection property="indicatorWidthConstraints" destination="nnl-i7-MDn" collectionClass="NSMutableArray" id="m0k-4d-M0I"/>
+                <outletCollection property="indicatorWidthConstraints" destination="FQD-9A-hKn" collectionClass="NSMutableArray" id="LDH-ru-N6g"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fys-98-HRP">
+            <rect key="frame" x="0.0" y="0.0" width="359" height="95"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" spacing="44" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YEq-9V-Ho7">
+                    <rect key="frame" x="90" y="0.0" width="179" height="29"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jY-HP-uNl">
+                            <rect key="frame" x="0.0" y="0.0" width="95" height="29"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Phone Number">
+                                <color key="titleColor" name="Gray"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" name="Gray"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapModeButton:" destination="-1" eventType="touchUpInside" id="4Mo-dD-BNu"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAp-B7-DOd">
+                            <rect key="frame" x="139" y="0.0" width="40" height="29"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="E-mail">
+                                <color key="titleColor" name="Gray"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" name="Gray"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapModeButton:" destination="-1" eventType="touchUpInside" id="P2i-Bm-f1A"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-H8-QFA">
+                    <rect key="frame" x="90" y="23" width="95" height="2"/>
+                    <color key="backgroundColor" name="Orange"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="QpS-dH-0BU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="YEq-9V-Ho7" firstAttribute="centerX" secondItem="fys-98-HRP" secondAttribute="centerX" id="5qv-d0-LyB"/>
+                <constraint firstItem="gFc-H8-QFA" firstAttribute="centerX" secondItem="0jY-HP-uNl" secondAttribute="centerX" id="F6J-lU-Nd2"/>
+                <constraint firstItem="gFc-H8-QFA" firstAttribute="width" secondItem="AAp-B7-DOd" secondAttribute="width" id="FQD-9A-hKn"/>
+                <constraint firstItem="gFc-H8-QFA" firstAttribute="centerX" secondItem="AAp-B7-DOd" secondAttribute="centerX" id="PwP-Bi-guI"/>
+                <constraint firstItem="gFc-H8-QFA" firstAttribute="top" secondItem="YEq-9V-Ho7" secondAttribute="bottom" constant="-6" id="TEs-6o-5KI"/>
+                <constraint firstItem="YEq-9V-Ho7" firstAttribute="top" secondItem="fys-98-HRP" secondAttribute="top" id="VeH-CR-Y3A"/>
+                <constraint firstItem="gFc-H8-QFA" firstAttribute="width" secondItem="0jY-HP-uNl" secondAttribute="width" id="nnl-i7-MDn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="FQD-9A-hKn"/>
+                    <exclude reference="PwP-Bi-guI"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-843" y="-335"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Gray">
+            <color red="0.48600000143051147" green="0.50999999046325684" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Orange">
+            <color red="1" green="0.70599997043609619" blue="0.14499999582767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
